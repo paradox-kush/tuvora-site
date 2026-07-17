@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add an M3U playlist to Tuvora (URL or file)</title>
+<style>
+  :root { --brand: #F5B301; --ink: #0E0E10; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #FFF; margin: 0; line-height: 1.55; }
+  header { background: var(--brand); padding: 22px 24px; }
+  .head-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
+  .mark { width: 40px; height: 40px; border-radius: 10px; background: var(--ink); display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  header h1 { font-size: 1.15rem; margin: 0; }
+  header a { color: var(--ink); text-decoration: none; }
+  main { max-width: 760px; margin: 0 auto; padding: 30px 24px 56px; }
+  h2 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h3 { font-size: 1.12rem; margin: 30px 0 8px; }
+  h4 { font-size: 0.98rem; margin: 20px 0 6px; }
+  p { margin: 0 0 12px; }
+  ol, ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  kbd { background: #F3F3F3; border: 1px solid #DDD; border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-size: 0.88em; font-family: inherit; white-space: nowrap; }
+  code { background: #F3F3F3; border-radius: 6px; padding: 1px 6px; font-size: 0.88em; word-break: break-all; }
+  .note { background: #FFF7DE; border: 1px solid #F0DFA0; border-radius: 10px; padding: 12px 16px; font-size: 0.9rem; margin: 18px 0; }
+  .warn { background: #FDECEC; border: 1px solid #F2C4C4; border-radius: 10px; padding: 12px 16px; font-size: 0.9rem; margin: 18px 0; }
+  .shot { margin: 16px 0 22px; text-align: center; }
+  .shot img { max-width: 100%; border: 1px solid #E5E5E5; border-radius: 14px; }
+  .shot img.phone { max-width: 320px; }
+  .shot figcaption { font-size: 0.82rem; color: #777; margin-top: 6px; }
+  .foot { max-width: 760px; margin: 0 auto; padding: 0 24px 40px; font-size: 0.85rem; color: #666; }
+  .foot a { color: var(--ink); }
+</style>
+</head>
+<body>
+<header>
+  <div class="head-inner">
+    <a class="mark" href="../index.html" aria-label="Tuvora home"><svg width="22" height="22" viewBox="0 0 52 52"><path d="M 18 12 L 18 40 L 40 26 Z" fill="#F5B301" stroke="#F5B301" stroke-width="8" stroke-linejoin="round"/></svg></a>
+    <h1><a href="../guides.html">← All guides</a></h1>
+  </div>
+</header>
+<main>
+  <h2>📄 Add an M3U playlist</h2>
+  <p>Use this if your provider gave you a playlist <strong>link</strong> (often ending in <code>get.php?…&amp;type=m3u_plus</code> or <code>.m3u</code>) or you have a playlist <strong>file</strong> (<code>.m3u</code> / <code>.m3u8</code>, optionally <code>.gz</code>).</p>
+
+  <h3>Open the add screen</h3>
+  <h4>📱 Phone</h4>
+  <ol>
+    <li>Tap the <kbd>IPTV</kbd> tab. First time? Tap <kbd>Add IPTV provider</kbd>. (Or: profile avatar → Settings → <kbd>Integrations</kbd> → <kbd>IPTV (Xtream Codes)</kbd> → <kbd>Add Playlist</kbd>.)</li>
+    <li>At the top, set <strong>Source Type</strong> to <kbd>URL</kbd> — or <kbd>File</kbd> for a local file.</li>
+  </ol>
+  <h4>📺 TV</h4>
+  <ol>
+    <li>Open <kbd>IPTV</kbd> in the left sidebar and choose <kbd>Add IPTV provider</kbd>.</li>
+    <li>Set <strong>Source Type</strong> to <kbd>URL</kbd> (or <kbd>File</kbd>).</li>
+  </ol>
+  <figure class="shot"><img src="img/tv-iptv-empty.png" alt="Tuvora TV — IPTV section, first run: Add IPTV provider and Add from phone buttons"><figcaption>TV — first time in <kbd>IPTV</kbd>: <kbd>Add IPTV provider</kbd> or <kbd>Add from phone</kbd>.</figcaption></figure>
+  <div class="note">💡 <strong>Hate typing with the remote?</strong> Choose <kbd>Add from phone</kbd> instead — scan the QR with your phone and enter the playlist there. It appears on the TV automatically.</div>
+
+  <h3>Option A — playlist URL</h3>
+  <ol>
+    <li><strong>M3U URL</strong> — paste the full link from your provider, e.g. <code>http://host:port/get.php?username=…&amp;password=…&amp;type=m3u_plus</code> or <code>…/playlist.m3u</code>.</li>
+    <li><strong>User-Agent (optional)</strong> — leave empty unless your provider requires a specific player string (e.g. <code>VLC/3.0.20 LibVLC/3.0.20</code>).</li>
+    <li><strong>Name (optional)</strong> — anything you like, e.g. "Living room".</li>
+    <li>Press <kbd>Add Playlist</kbd>. Tuvora downloads and indexes the whole list once so browsing is fast — <em>large playlists can take a moment</em>.</li>
+  </ol>
+  <figure class="shot"><img class="phone" src="img/phone-add-url.png" alt="Tuvora phone — Add Playlist screen with URL selected: M3U URL, User-Agent, Name and EPG URL fields"><figcaption>Phone — Source Type <kbd>URL</kbd>: the M3U Playlist form (with optional XMLTV EPG override below).</figcaption></figure>
+
+  <h3>Option B — playlist file</h3>
+  <ol>
+    <li>Set <strong>Source Type</strong> to <kbd>File</kbd> and tap <kbd>Choose file</kbd>; pick your <code>.m3u</code> / <code>.m3u8</code> (or <code>.gz</code>) file.</li>
+    <li>Optionally name it, then <kbd>Add Playlist</kbd>.</li>
+  </ol>
+  <ul>
+    <li>The file is <strong>copied into the app</strong> — you can move or delete the original afterwards.</li>
+    <li><strong>File contents don't sync</strong> between devices (URLs do). On a TV with no file picker you'll see: <em>"No file picker on this device — add the file by URL or from your phone (it syncs)."</em></li>
+  </ul>
+
+  <h3>Troubleshooting</h3>
+  <ul>
+    <li><strong>Empty after adding?</strong> Big lists index in the background — give it a minute, then reopen <kbd>IPTV</kbd>.</li>
+    <li><strong>Error on save?</strong> Test the same URL in VLC. If it fails there too, the link or your subscription is the problem — contact your provider.</li>
+    <li><strong>Works in VLC but not Tuvora?</strong> Some providers lock playback to a player string — set <strong>User-Agent</strong> to the one they expect and save again.</li>
+    <li><strong>Guide/EPG missing?</strong> Many M3U links pair with a separate EPG URL from your provider — check the playlist's settings after adding.</li>
+    <li>Still stuck? <a href="https://github.com/paradox-kush/tuvora/issues">Open a "Playlist / source won't work" report</a>.</li>
+  </ul>
+
+  <div class="warn">🔒 Your playlist URL usually <strong>contains your username and password</strong>. Never post it publicly — blur or replace it with <code>http://REDACTED:8080/…</code> in screenshots and bug reports.</div>
+</main>
+<div class="foot">Tuvora is a media player. It does not provide any channels, movies, or series — you play content from your own playlists and subscriptions.</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add a Stalker portal to Tuvora</title>
+<style>
+  :root { --brand: #F5B301; --ink: #0E0E10; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #FFF; margin: 0; line-height: 1.55; }
+  header { background: var(--brand); padding: 22px 24px; }
+  .head-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
+  .mark { width: 40px; height: 40px; border-radius: 10px; background: var(--ink); display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  header h1 { font-size: 1.15rem; margin: 0; }
+  header a { color: var(--ink); text-decoration: none; }
+  main { max-width: 760px; margin: 0 auto; padding: 30px 24px 56px; }
+  h2 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h3 { font-size: 1.12rem; margin: 30px 0 8px; }
+  p { margin: 0 0 12px; }
+  ol, ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  kbd { background: #F3F3F3; border: 1px solid #DDD; border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-size: 0.88em; font-family: inherit; white-space: nowrap; }
+  code { background: #F3F3F3; border-radius: 6px; padding: 1px 6px; font-size: 0.88em; word-break: break-all; }
+  .note { background: #FFF7DE; border: 1px solid #F0DFA0; border-radius: 10px; padding: 12px 16px; font-size: 0.9rem; margin: 18px 0; }
+  .warn { background: #FDECEC; border: 1px solid #F2C4C4; border-radius: 10px; padding: 12px 16px; font-size: 0.9rem; margin: 18px 0; }
+  .shot { margin: 16px 0 22px; text-align: center; }
+  .shot img { max-width: 100%; border: 1px solid #E5E5E5; border-radius: 14px; }
+  .shot img.phone { max-width: 320px; }
+  .shot figcaption { font-size: 0.82rem; color: #777; margin-top: 6px; }
+  .foot { max-width: 760px; margin: 0 auto; padding: 0 24px 40px; font-size: 0.85rem; color: #666; }
+  .foot a { color: var(--ink); }
+</style>
+</head>
+<body>
+<header>
+  <div class="head-inner">
+    <a class="mark" href="../index.html" aria-label="Tuvora home"><svg width="22" height="22" viewBox="0 0 52 52"><path d="M 18 12 L 18 40 L 40 26 Z" fill="#F5B301" stroke="#F5B301" stroke-width="8" stroke-linejoin="round"/></svg></a>
+    <h1><a href="../guides.html">← All guides</a></h1>
+  </div>
+</header>
+<main>
+  <h2>📡 Add a Stalker portal</h2>
+  <p>Use this if your provider gave you a <strong>portal URL</strong> and a <strong>MAC address</strong> (the details usually meant for a set-top box / "STB emulator"). Stalker portals sign in with the MAC — <em>no username or password needed</em> in most cases.</p>
+
+  <h3>📱 On your phone</h3>
+  <ol>
+    <li>Tap the <kbd>IPTV</kbd> tab → <kbd>Add IPTV provider</kbd>. (Or: profile avatar → Settings → <kbd>Integrations</kbd> → <kbd>IPTV (Xtream Codes)</kbd> → <kbd>Add Playlist</kbd>.)</li>
+    <li>Set <strong>Source Type</strong> to <kbd>Stalker</kbd>.</li>
+    <li>Fill the <strong>Stalker Portal</strong> form:
+      <ul>
+        <li><strong>Portal URL</strong> — e.g. <code>http://host:port/c/</code> (many providers include the trailing <code>/c/</code>)</li>
+        <li><strong>MAC Address</strong> — the one registered with your provider, format <code>00:1A:79:xx:xx:xx</code> (the <code>00:1A:79:</code> prefix is pre-filled)</li>
+      </ul>
+    </li>
+    <li>Press <kbd>Add Playlist</kbd>.</li>
+  </ol>
+  <figure class="shot"><img class="phone" src="img/phone-add-stalker.png" alt="Tuvora phone — Add Playlist screen with Stalker selected: Portal URL and MAC Address fields"><figcaption>Phone — Source Type <kbd>Stalker</kbd> with Portal URL + MAC.</figcaption></figure>
+
+  <h3>📺 On your TV</h3>
+  <ol>
+    <li>Open <kbd>IPTV</kbd> in the sidebar → <kbd>Add IPTV provider</kbd> → Source Type <kbd>Stalker</kbd>.</li>
+    <li>Enter <strong>Portal URL</strong> and <strong>MAC Address</strong>, then <kbd>Add Playlist</kbd>.</li>
+    <li>TV extras: <kbd>Randomize MAC</kbd> generates a virtual STB MAC (only useful if your provider lets you register a new one), and <kbd>Send Device ID</kbd> controls whether a device identifier is sent to the portal — leave it as-is unless your provider says otherwise.</li>
+  </ol>
+  <figure class="shot"><img src="img/tv-add-dialog.png" alt="Tuvora TV — the Add Playlist dialog with the Source Type row: URL, File, Xtream, Stalker"><figcaption>TV — the Add Playlist dialog; pick <kbd>Stalker</kbd> in the Source Type row to get the portal form.</figcaption></figure>
+
+  <h3>The optional fields (when your provider gave you more)</h3>
+  <p>The device <strong>serial and ID are derived from the MAC automatically</strong> — only override them if your provider handed you specific values:</p>
+  <ul>
+    <li><strong>Serial number (optional)</strong> / <strong>Device ID (optional)</strong> — paste exactly what the provider sent.</li>
+    <li><strong>Portal username / password (optional)</strong> — a few portals add a login on top of the MAC; fill these only if yours does.</li>
+  </ul>
+
+  <h3>Troubleshooting</h3>
+  <ul>
+    <li><strong>"Portal error" / won't sign in?</strong> Check the MAC is the exact one registered with the provider, and try the Portal URL with and without the trailing <code>/c/</code>.</li>
+    <li><strong>Worked, then stopped after switching apps?</strong> Some portals only allow one active session per MAC — make sure the same MAC isn't signed in on another box or app at the same time.</li>
+    <li><strong>Provider says "wrong device"?</strong> They may check serial/Device ID — ask them for the values and put them in the optional fields.</li>
+    <li>Still stuck? <a href="https://github.com/paradox-kush/tuvora/issues">Open a "Playlist / source won't work" report</a>.</li>
+  </ul>
+
+  <div class="warn">🔒 Your portal URL + MAC are your credentials. Don't post them publicly — redact like <code>http://REDACTED/c/</code>, MAC <code>00:1A:79:xx:xx:xx</code>.</div>
+</main>
+<div class="foot">Tuvora is a media player. It does not provide any channels, movies, or series — you play content from your own playlists and subscriptions.</div>
+</body>
+</html>

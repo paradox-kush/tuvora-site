@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started with Tuvora — install, sign in &amp; navigation</title>
+<style>
+  :root { --brand: #F5B301; --ink: #0E0E10; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #FFF; margin: 0; line-height: 1.55; }
+  header { background: var(--brand); padding: 22px 24px; }
+  .head-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
+  .mark { width: 40px; height: 40px; border-radius: 10px; background: var(--ink); display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  header h1 { font-size: 1.15rem; margin: 0; }
+  header a { color: var(--ink); text-decoration: none; }
+  main { max-width: 760px; margin: 0 auto; padding: 30px 24px 56px; }
+  h2 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h3 { font-size: 1.12rem; margin: 30px 0 8px; }
+  h4 { font-size: 0.98rem; margin: 20px 0 6px; }
+  p { margin: 0 0 12px; }
+  ol, ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  kbd { background: #F3F3F3; border: 1px solid #DDD; border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-size: 0.88em; font-family: inherit; white-space: nowrap; }
+  .pill { display: inline-block; background: var(--ink); color: var(--brand); border-radius: 999px; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; margin: 0 0 6px; letter-spacing: .04em; }
+  .note { background: #FFF7DE; border: 1px solid #F0DFA0; border-radius: 10px; padding: 12px 16px; font-size: 0.9rem; margin: 18px 0; }
+  .shot { margin: 16px 0 22px; text-align: center; }
+  .shot img { max-width: 100%; border: 1px solid #E5E5E5; border-radius: 14px; }
+  .shot img.phone { max-width: 320px; }
+  .shot img.strip { max-width: 220px; }
+  .shot figcaption { font-size: 0.82rem; color: #777; margin-top: 6px; }
+  .crumb { font-size: 0.85rem; margin-bottom: 22px; }
+  .crumb a { color: var(--ink); }
+  .foot { max-width: 760px; margin: 0 auto; padding: 0 24px 40px; font-size: 0.85rem; color: #666; }
+  .foot a { color: var(--ink); }
+</style>
+</head>
+<body>
+<header>
+  <div class="head-inner">
+    <a class="mark" href="../index.html" aria-label="Tuvora home"><svg width="22" height="22" viewBox="0 0 52 52"><path d="M 18 12 L 18 40 L 40 26 Z" fill="#F5B301" stroke="#F5B301" stroke-width="8" stroke-linejoin="round"/></svg></a>
+    <h1><a href="../guides.html">← All guides</a></h1>
+  </div>
+</header>
+<main>
+  <h2>🚀 Getting started with Tuvora</h2>
+  <p>Install the app, sign in once, add a playlist, and you're watching. Here's the lay of the land.</p>
+
+  <h3>1. Install</h3>
+  <p>Tuvora is in beta on Google Play. Join the tester group first, then install:</p>
+  <ol>
+    <li>Join <a href="https://groups.google.com/g/tuvora-testers">the tester group</a> with your Google account.</li>
+    <li>Open the link for your device — <a href="https://play.google.com/apps/testing/com.tuvora.mobile">phone / tablet</a> or <a href="https://play.google.com/apps/testing/com.tuvora.tv">Android TV / Google TV</a> — and tap <kbd>Download it on Google Play</kbd>.</li>
+  </ol>
+
+  <h3>2. Sign in (optional, but you want it)</h3>
+  <p>An account syncs your playlists and watch progress between your phone and your TV.</p>
+  <h4>📱 Phone</h4>
+  <ol>
+    <li>Tap your <strong>profile avatar</strong> (right end of the bottom bar) to open Settings → <kbd>Account</kbd> → <kbd>Sign In</kbd>.</li>
+    <li>Enter email + password, then <kbd>Sign In</kbd> — or <kbd>Create Account</kbd> if you're new. You can also <kbd>Continue Without Account</kbd>; your data then stays on the device only.</li>
+  </ol>
+  <h4>📺 TV — no typing needed</h4>
+  <ol>
+    <li>Open <kbd>Settings</kbd> (bottom of the left sidebar) → <kbd>Account</kbd> → <kbd>Sign In / Create Account</kbd>.</li>
+    <li>The TV shows a QR code: <em>"Scan QR and sign in on your phone."</em> Scan it with your phone camera, approve the sign-in on the phone, and the TV logs itself in.</li>
+    <li>Prefer the remote? Choose <kbd>Sign In</kbd> to type email + password on screen instead (there's a <kbd>Continue with QR</kbd> button to switch back).</li>
+  </ol>
+  <figure class="shot"><img src="img/tv-qr-signin.png" alt="Tuvora TV — QR sign-in screen: scan the code with your phone and approve"><figcaption>TV — scan the QR with your phone; no typing with the remote.</figcaption></figure>
+
+  <h3>3. Add your playlist</h3>
+  <p>Tuvora plays <em>your</em> content — add it as an <a href="m3u.html">M3U playlist</a>, an <a href="xtream.html">Xtream Codes login</a>, or a <a href="stalker.html">Stalker portal</a>. Each has its own short guide.</p>
+  <div class="note">💡 <strong>TV tip:</strong> in the IPTV section, pick <kbd>Add from phone</kbd> — scan the QR with your phone and type the playlist details there instead of with the remote.</div>
+  <figure class="shot"><img src="img/tv-iptv-settings.png" alt="Tuvora TV — IPTV settings: Add IPTV account, and Add from phone (scan a QR, no typing on the TV)"><figcaption>TV — <kbd>Add IPTV account</kbd>, or <kbd>Add from phone</kbd> to skip remote-typing.</figcaption></figure>
+
+  <h3>4. Finding your way around</h3>
+  <h4>📱 Phone — bottom tabs</h4>
+  <ul>
+    <li><kbd>Home</kbd> — continue watching + your content rows</li>
+    <li><kbd>Search</kbd> — search everything</li>
+    <li><kbd>Library</kbd> — your saved items</li>
+    <li><kbd>IPTV</kbd> — your playlists, with <kbd>Live TV</kbd> / <kbd>Movies</kbd> / <kbd>Series</kbd> sections and the guide</li>
+    <li><kbd>Sports</kbd> — the Sports centre: fixtures and events, matched to channels in <em>your</em> playlist</li>
+    <li><strong>Profile avatar</strong> — profiles &amp; Settings</li>
+  </ul>
+  <figure class="shot"><img class="phone" src="img/phone-home.png" alt="Tuvora phone — Home with a Live TV row and the bottom tabs"><figcaption>Phone — Home, with the tab bar along the bottom.</figcaption></figure>
+  <h4>📺 TV — left sidebar (D-pad)</h4>
+  <p>Press <em>left</em> to open the sidebar from anywhere: <kbd>Home</kbd>, <kbd>Search</kbd>, <kbd>Library</kbd>, <kbd>IPTV</kbd>, <kbd>Sports</kbd>, <kbd>Settings</kbd>. Inside IPTV you get the same <kbd>Live TV</kbd> / <kbd>Movies</kbd> / <kbd>Series</kbd> sections. Long rows scroll with the D-pad; <em>back</em> returns you to the sidebar.</p>
+  <figure class="shot"><img class="strip" src="img/tv-sidebar.png" alt="Tuvora TV — the left sidebar: Home, Search, Library, IPTV, Sports, Settings"><figcaption>TV — the sidebar, expanded.</figcaption></figure>
+
+  <h3>5. If something's off</h3>
+  <ul>
+    <li>Playlist trouble → check the matching guide's troubleshooting section first.</li>
+    <li>Found a bug? <a href="https://github.com/paradox-kush/tuvora/issues">Report it on GitHub</a> — never include your server URL or password.</li>
+  </ul>
+</main>
+<div class="foot">Tuvora is a media player. It does not provide any channels, movies, or series — you play content from your own playlists and subscriptions.</div>
+</body>
+</html>

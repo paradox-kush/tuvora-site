@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add an Xtream Codes login to Tuvora</title>
+<style>
+  :root { --brand: #F5B301; --ink: #0E0E10; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: #FFF; margin: 0; line-height: 1.55; }
+  header { background: var(--brand); padding: 22px 24px; }
+  .head-inner { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 14px; }
+  .mark { width: 40px; height: 40px; border-radius: 10px; background: var(--ink); display: inline-flex; align-items: center; justify-content: center; flex: none; }
+  header h1 { font-size: 1.15rem; margin: 0; }
+  header a { color: var(--ink); text-decoration: none; }
+  main { max-width: 760px; margin: 0 auto; padding: 30px 24px 56px; }
+  h2 { font-size: 1.5rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h3 { font-size: 1.12rem; margin: 30px 0 8px; }
+  h4 { font-size: 0.98rem; margin: 20px 0 6px; }
+  p { margin: 0 0 12px; }
+  ol, ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  kbd { background: #F3F3F3; border: 1px solid #DDD; border-bottom-width: 2px; border-radius: 6px; padding: 1px 7px; font-size: 0.88em; font-family: inherit; white-space: nowrap; }
+  code { background: #F3F3F3; border-radius: 6px; padding: 1px 6px; font-size: 0.88em; word-break: break-all; }
+  .note { background: #FFF7DE; border: 1px solid #F0DFA0; border-radius: 10px; padding: 12px 16px; font-size: 0.9rem; margin: 18px 0; }
+  .warn { background: #FDECEC; border: 1px solid #F2C4C4; border-radius: 10px; padding: 12px 16px; font-size: 0.9rem; margin: 18px 0; }
+  .shot { margin: 16px 0 22px; text-align: center; }
+  .shot img { max-width: 100%; border: 1px solid #E5E5E5; border-radius: 14px; }
+  .shot img.phone { max-width: 320px; }
+  .shot figcaption { font-size: 0.82rem; color: #777; margin-top: 6px; }
+  .foot { max-width: 760px; margin: 0 auto; padding: 0 24px 40px; font-size: 0.85rem; color: #666; }
+  .foot a { color: var(--ink); }
+</style>
+</head>
+<body>
+<header>
+  <div class="head-inner">
+    <a class="mark" href="../index.html" aria-label="Tuvora home"><svg width="22" height="22" viewBox="0 0 52 52"><path d="M 18 12 L 18 40 L 40 26 Z" fill="#F5B301" stroke="#F5B301" stroke-width="8" stroke-linejoin="round"/></svg></a>
+    <h1><a href="../guides.html">← All guides</a></h1>
+  </div>
+</header>
+<main>
+  <h2>🔑 Add an Xtream Codes login</h2>
+  <p>Use this if your provider gave you a <strong>server URL (portal), username and password</strong> — the classic "Xtream Codes API" details. If they only gave you one long link, that works too: paste it and Tuvora fills in the rest.</p>
+
+  <h3>📱 On your phone</h3>
+  <ol>
+    <li>Tap the <kbd>IPTV</kbd> tab → <kbd>Add IPTV provider</kbd>. (Or: profile avatar → Settings → <kbd>Integrations</kbd> → <kbd>IPTV (Xtream Codes)</kbd> → <kbd>Add Playlist</kbd>.)</li>
+    <li>Set <strong>Source Type</strong> to <kbd>Xtream</kbd>.</li>
+    <li>Fill the <strong>Xtream Account</strong> form:
+      <ul>
+        <li><strong>Server URL</strong> — the portal, e.g. <code>http://host:port</code> (include the port; no <code>/get.php</code> needed)</li>
+        <li><strong>Username</strong> and <strong>Password</strong> — exactly as your provider sent them</li>
+        <li><strong>Name (optional)</strong> — e.g. "Main sub"</li>
+      </ul>
+    </li>
+    <li>Press <kbd>Add Playlist</kbd>. Tuvora verifies the login, then indexes your channels, movies and series.</li>
+  </ol>
+  <figure class="shot"><img class="phone" src="img/phone-add-xtream.png" alt="Tuvora phone — Add Playlist screen with Xtream selected: Server URL, Username, Password fields"><figcaption>Phone — Source Type <kbd>Xtream</kbd> with the account form.</figcaption></figure>
+
+  <div class="note">💡 <strong>Shortcut:</strong> got a full link like <code>http://host:port/get.php?username=…&amp;password=…</code>? Paste it into <strong>Server URL</strong> — username and password fill in automatically.</div>
+
+  <h3>📺 On your TV</h3>
+  <ol>
+    <li>Open <kbd>IPTV</kbd> in the sidebar → <kbd>Add IPTV provider</kbd> → Source Type <kbd>Xtream</kbd>.</li>
+    <li>Pick your input style: <kbd>Enter details</kbd> (Server URL / Username / Password) or <kbd>Paste link</kbd> (one field for the whole <code>get.php</code> link).</li>
+    <li>Press <kbd>Add Playlist</kbd>.</li>
+  </ol>
+  <figure class="shot"><img src="img/tv-add-dialog.png" alt="Tuvora TV — Add IPTV dialog with Xtream selected, Enter details and Paste link options"><figcaption>TV — <kbd>Enter details</kbd> / <kbd>Paste link</kbd> for Xtream.</figcaption></figure>
+  <div class="note">💡 <strong>Skip remote-typing:</strong> choose <kbd>Add from phone</kbd> instead — scan the QR and enter the same details on your phone.</div>
+
+  <h3>Troubleshooting</h3>
+  <ul>
+    <li><strong>"Verifying…" fails?</strong> Double-check the port in Server URL (e.g. <code>:8080</code>) and try <code>http://</code> instead of <code>https://</code> — many portals are HTTP-only.</li>
+    <li><strong>Login rejected?</strong> Confirm the username/password by logging in wherever your provider's panel lives, or test the <code>get.php</code> link in VLC. Some providers limit simultaneous connections — stop other players first.</li>
+    <li><strong>Adds but sections are empty?</strong> Large accounts index in the background; give it a minute. If a section stays empty, your subscription may not include it.</li>
+    <li>Still stuck? <a href="https://github.com/paradox-kush/tuvora/issues">Open a "Playlist / source won't work" report</a>.</li>
+  </ul>
+
+  <div class="warn">🔒 Your Xtream details are credentials. Never post your server URL, username, or password publicly — use <code>http://REDACTED:8080</code>, user <code>REDACTED</code> in screenshots and bug reports.</div>
+</main>
+<div class="foot">Tuvora is a media player. It does not provide any channels, movies, or series — you play content from your own playlists and subscriptions.</div>
+</body>
+</html>
