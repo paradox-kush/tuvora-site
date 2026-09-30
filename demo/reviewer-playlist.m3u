@@ -1,11 +1,16 @@
 #EXTM3U
-# Demo playlist for app review — publicly available, legally free live streams.
-# Tuvora ships no content; this playlist exists so reviewers can test playback.
+# Demo playlist for app review. Tuvora ships no content; this playlist exists so reviewers can test
+# playback with sources that are clearly free to stream:
+#   NASA TV            - US government work, public domain.
+#   DW / France 24     - public broadcasters' own free English livestreams.
+#   Sintel, Tears of Steel - Blender Foundation open movies, CC BY 3.0 (www.blender.org).
 #EXTINF:-1 tvg-name="NASA TV" group-title="Science",NASA TV
 https://ntv1.akamaized.net/hls/live/2014075/NASA-NTV1-HLS/master.m3u8
-#EXTINF:-1 tvg-name="Red Bull TV" group-title="Sports",Red Bull TV
-https://rbmn-live.akamaized.net/hls/live/590964/BoRB-AT/master_928.m3u8
 #EXTINF:-1 tvg-name="DW English" group-title="News",DW English
 https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
 #EXTINF:-1 tvg-name="France 24 English" group-title="News",France 24 English
 https://static.france24.com/live/F24_EN_LO_HLS/live_web.m3u8
+#EXTINF:-1 tvg-name="Sintel" group-title="Open Movies",Sintel (2010)
+https://download.blender.org/demo/movies/Sintel.2010.1080p.mkv
+#EXTINF:-1 tvg-name="Tears of Steel" group-title="Open Movies",Tears of Steel (2012)
+https://download.blender.org/demo/movies/ToS/tears_of_steel_720p.mov
